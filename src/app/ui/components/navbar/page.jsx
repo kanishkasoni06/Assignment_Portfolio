@@ -49,7 +49,8 @@ const Navbar = () => {
           <Image
             src="/assests/logo_assignment.png" // Replace with your logo path
             alt="Logo"
-            style={{ width: "150px" }}
+            height={100}
+            width={150}
           />
         </div>
 

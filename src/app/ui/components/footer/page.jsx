@@ -12,7 +12,8 @@ const Footer = () => {
           <Image
             src="/assests/logo_assignment.png" // Replace with your actual logo path
             alt="Mumair Logo"
-            style={{height:"45px"}}
+            height={55}
+            width={250}
           />
         </div>
         <div className="flex justify-center space-x-8  mb-6 py-4">

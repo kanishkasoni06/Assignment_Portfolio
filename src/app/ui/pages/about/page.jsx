@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div id='about' style={{height:"100vh"}} className="flex justify-between items-center max-w-screen-xl mx-auto">
     <div className="flex-1 justify-center space-x-4 my-10">
-        <Image src='/assests/about_assignment.png' alt='profileImage' className='rounded-full bg-white object-contain'/>
+        <Image src='/assests/about_assignment.png' alt='profileImage' width={550} height={550} className='rounded-full bg-white object-contain'/>
     </div>
         <div className='flex-1 justify-center items-center space-x-4'>
         <h2 className='text-5xl font-extrabold pl-4'>About Me</h2>
