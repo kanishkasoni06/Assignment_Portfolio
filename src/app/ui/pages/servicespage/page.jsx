@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 const services = [
@@ -39,7 +40,7 @@ const Services = () => {
               key={index}
               className="p-6 bg-gray-50 rounded-lg text-center transition-transform duration-300 ease-in-out transform hover:scale-105"
             >
-              <img src={service.icon} alt={service.title} className=" h-16 mx-auto mb-4" />
+              <Image src={service.icon} alt={service.title} className=" h-16 mx-auto mb-4" />
               <h3 className="text-xl font-bold mb-2">{service.title}</h3>
               <p className="text-gray-500">{service.description}</p>
             </div>

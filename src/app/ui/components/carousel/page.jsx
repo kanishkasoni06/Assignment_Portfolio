@@ -1,4 +1,5 @@
 "use client"
+import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 
 const Carousel = () => {
@@ -64,7 +65,7 @@ const Carousel = () => {
             {testimonials.map((testimonial, index) => (
               <div key={index} className="min-w-full flex-shrink-0 px-6">
                 <div className="flex items-center justify-center space-x-4">
-                  <img src={testimonial.avatar} alt={testimonial.name} className="h-28 rounded-full" />
+                  <Image src={testimonial.avatar} alt={testimonial.name} className="h-28 rounded-full" />
                   <div className="text-left">
                     <p className="text-lg text-grey-300 mb-2">
                     <span className="text-xl font-bold text-orange-500 mb-2">“</span>{testimonial.quote}

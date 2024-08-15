@@ -1,5 +1,6 @@
 import React from 'react'
 import IconList from '../../components/iconList/page';
+import Image from 'next/image';
 
 
 const HomePage = () => {
@@ -24,7 +25,7 @@ const HomePage = () => {
     <div className='flex-1 items-center justify-center'>
          <div className='flex-col justify-items-center'>
          <div className="flex justify-center space-x-4 my-10">
-        <img src='/assests/profile_assigment.png' alt='profileImage' className='rounded-full bg-white object-contain'/>
+        <Image src='/assests/profile_assigment.png' alt='profileImage' className='rounded-full bg-white object-contain'/>
         </div>
         <IconList/>
         </div>

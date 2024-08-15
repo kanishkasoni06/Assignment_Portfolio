@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 const Projects = () => {
@@ -20,21 +21,21 @@ const Projects = () => {
 
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
      <div className="rounded-lg overflow-hidden">
-        <img src="/assests/Group 24.png" alt="AirCalling Landing Page Design" className=" w-full object-contain" />
+        <Image src="/assests/Group 24.png" alt="AirCalling Landing Page Design" className=" w-full object-contain" />
         <div className="p-5">
           <h3 className="text-orange-500 font-bold mb-2 text-left">Web Design</h3>
           <p className="font-extrabold text-lg text-left">AirCalling Landing Page Design</p>
         </div>   
       </div>
       <div className="rounded-lg overflow-hidden">
-        <img src="/assests/Frame 3.png" alt="Business Landing Page Design" className=" w-full object-contain" />
+        <Image src="/assests/Frame 3.png" alt="Business Landing Page Design" className=" w-full object-contain" />
         <div className="p-5">
           <h3 className="text-orange-500 font-bold mb-2 text-left">Web Design</h3>
           <p className="font-extrabold text-lg text-left">Business Landing Page Design</p>
         </div>   
       </div>
       <div className="rounded-lg overflow-hidden">
-        <img src="/assests/Frame 4.png" alt="Ecom Web Design" className=" w-full object-contain" />
+        <Image src="/assests/Frame 4.png" alt="Ecom Web Design" className=" w-full object-contain" />
         <div className="p-5">
           <h3 className="text-orange-500 font-bold mb-2 text-left">Web Design</h3>
           <p className="font-extrabold text-lg text-left">Ecom Web Design</p>

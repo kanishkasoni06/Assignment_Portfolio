@@ -31,6 +31,7 @@
 
 // export default Navbar;
 "use client"
+import Image from "next/image";
 import React, { useState } from "react";
 
 const Navbar = () => {
@@ -45,7 +46,7 @@ const Navbar = () => {
       <div className="flex justify-between items-center max-w-screen-xl mx-auto">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <img
+          <Image
             src="/assests/logo_assignment.png" // Replace with your logo path
             alt="Logo"
             style={{ width: "150px" }}

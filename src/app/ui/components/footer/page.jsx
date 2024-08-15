@@ -1,6 +1,7 @@
 import React from "react";
 import PageList from "../pageList/page";
 import IconList from "../iconList/page";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -8,7 +9,7 @@ const Footer = () => {
       <div className=" mx-auto text-center py-8">
         {/* Logo */}
         <div className="flex justify-center items-center space-x-2 mb-4 ">
-          <img
+          <Image
             src="/assests/logo_assignment.png" // Replace with your actual logo path
             alt="Mumair Logo"
             style={{height:"45px"}}
