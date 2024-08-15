@@ -5,7 +5,7 @@ const Contact = () => {
     <div id='contact' className='p-12 m-12'>
     <div className="container text-center mx-auto ">
     <div>
-    <p className='font-black text-5xl mb-5'>Let's Design Together</p>
+    <p className='font-black text-5xl mb-5'>Let&apos;s Design Together</p>
     <p className='mx-auto w-1/2 my-10 text-xl'>Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium</p>
     </div>
     <div className="flex items-center mt-1 justify-center mx-auto">
