@@ -1,6 +1,6 @@
-"use client"
+"use client";
 import Image from 'next/image';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 const Carousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -32,9 +32,10 @@ const Carousel = () => {
       },
   ];
 
-  const nextSlide = () => {
+  // Memoize the nextSlide function
+  const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
-  };
+  }, [testimonials.length]);
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
@@ -44,17 +45,17 @@ const Carousel = () => {
     setCurrentSlide(index);
   };
 
-  // Auto-rotate functionality
+  // Auto-rotate functionality with memoized nextSlide
   useEffect(() => {
     const autoSlide = setInterval(() => {
       nextSlide();
-    }, 3000); // Change slide every 500ms
+    }, 3000); // Change slide every 3000ms
 
     // Clear interval on component unmount
     return () => {
       clearInterval(autoSlide);
     };
-  }, []);
+  }, [nextSlide]);
 
   return (
     <section className="py-14">
@@ -65,7 +66,7 @@ const Carousel = () => {
             {testimonials.map((testimonial, index) => (
               <div key={index} className="min-w-full flex-shrink-0 px-6">
                 <div className="flex items-center justify-center space-x-4">
-                  <Image src={testimonial.avatar} alt={testimonial.name} height={28} width={10} className="h-28 rounded-full" />
+                  <Image src={testimonial.avatar} alt={testimonial.name} height={100} width={100} className="h-28 rounded-full" />
                   <div className="text-left">
                     <p className="text-lg text-grey-300 mb-2">
                     <span className="text-xl font-bold text-orange-500 mb-2">“</span>{testimonial.quote}
@@ -88,18 +89,10 @@ const Carousel = () => {
             ></button>
           ))}
         </div>
-{/* 
-        <div className="mt-8 flex justify-between">
-          <button onClick={prevSlide} className="text-white bg-gray-800 p-2 rounded-lg">
-            Prev
-          </button>
-          <button onClick={nextSlide} className="text-white bg-gray-800 p-2 rounded-lg">
-            Next
-          </button>
-        </div> */}
       </div>
     </section>
   );
 };
 
 export default Carousel;
+
