@@ -25,7 +25,7 @@ const HomePage = () => {
     <div className='flex-1 items-center justify-center'>
          <div className='flex-col justify-items-center'>
          <div className="flex justify-center space-x-4 my-10">
-        <Image src='/assests/profile_assigment.png' height={550} width={550} alt='profileImage' className='rounded-full bg-white object-contain'/>
+        <Image src='/assests/profile_assigment.png' height={450} width={450} alt='profileImage' className='rounded-full bg-white object-contain'/>
         </div>
         <IconList/>
         </div>
